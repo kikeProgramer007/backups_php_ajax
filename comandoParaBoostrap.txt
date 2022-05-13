@@ -1,0 +1,15 @@
+> npm  i bootstrap
+Intalar el plugins de live "Sass Compiler" en visual studio code
+
+->Aquí se cambia colores 'node_modules/boostrap/scss/_variables.scss':
+(apartir d la linea 70)
+
+// scss-docs-start theme-color-variables
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
