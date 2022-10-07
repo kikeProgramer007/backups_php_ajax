@@ -77,10 +77,16 @@
     
         # Crear un archivo que tendrá un nombre como respaldo_2018-10-22_asd123.sql
         $nombreDelArchivo = sprintf('%s/respaldo_%s_%s.sql', $carpeta, $fecha, $id);
-    
+        $download='respaldo_'.$fecha.'_'.$id.'.sql';
+        if (file_put_contents($nombreDelArchivo, $contenido) !== false) {
+            echo 'Respaldo generado con exito: '.$download.' ===> <a href="respaldos/'.$download.'" download>descargar archivo</a> <a href="../">Regresar</a>';
+        }else{
+            echo 'Ha ocurrido un error';
+        }
+       
         #Escribir todo el contenido. Si todo va bien, file_put_contents NO devuelve FALSE
         return file_put_contents($nombreDelArchivo, $contenido) !== false;
       
     }
     
-    exportarTablas("localhost", "root", "", "datatable");
+    exportarTablas("localhost", "root", "", "phpnativo_respaldos");

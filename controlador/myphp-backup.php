@@ -11,7 +11,7 @@
  */
 define("DB_USER", 'root');
 define("DB_PASSWORD", '');
-define("DB_NAME", 'datatable');
+define("DB_NAME", 'phpnativo_respaldos');
 define("DB_HOST", 'localhost');
 define("BACKUP_DIR", 'myphp-backup-files'); // Comment this line to use same script's directory ('.')
 define("TABLES", '*'); // Full backup
@@ -481,7 +481,6 @@ if(!$changed){
 }
 $result = $backupDatabase->backupTables($changed) ? 'OK' : 'KO';
 */
-
 
 $backupDatabase->obfPrint('Backup result: ' . $result, 1);
 

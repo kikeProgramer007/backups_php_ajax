@@ -1,7 +1,7 @@
 <?php
 //Datos de conexion
 $db_host = 'localhost';
-$db_name = 'datatable';
+$db_name = 'phpnativo_respaldos';
 $db_user = 'root';
 $db_pass = '';
 
@@ -13,6 +13,8 @@ $slida_sql = $db_name.'_'.$fecha.'.sql';
 
 //Comando para generar respaldo de Mysql
 $dump = "mysqldump -h$db_host -u$db_user -p$db_pass $db_name > $slida_sql";
+
+
 exec($dump);
 
 //Descargar
